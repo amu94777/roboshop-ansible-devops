@@ -21,12 +21,12 @@
   - name: Replace ports numbers
     ansible.builtin.replace:
       path: /etc/mongod.conf
-      regexp: 127.0.0.1
-      replace: 0.0.0.0
+      regexp: '127.0.0.1'
+      replace: '0.0.0.0'
 
   - name: restart mongodb service
     ansible.builtin.service:
-      name: mongod
+      name: mongod 
       service: restarted
        
 
