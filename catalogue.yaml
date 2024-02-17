@@ -7,8 +7,8 @@
 
   - name: Install node-js
     ansible.builtin.package:
-    name: nodejs
-    state: present  
+      name: nodejs
+      state: present  
 
   - name: Add the roboshop user
     ansible.builtin.user:
