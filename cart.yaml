@@ -46,7 +46,7 @@
       src: cart.service
       dest: /etc/systemd/system/cart.service 
 
- - name: start and enable catalogue
+  - name: start and enable catalogue
     ansible.builtin.service:
       name: catalogue
       state: restarted
