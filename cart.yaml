@@ -52,12 +52,12 @@
 #       state: restarted
 #       enabled: yes   
 
-   - name: cart
-      hosts: cart
-      become: yes
-      tasks:
-      - name: disable old nodejs and enable nodejs
-        ansible.builtin.shell: dnf module disable nodejs -y ; dnf module enable nodejs:18 -y
+  - name: cart
+    hosts: cart
+    become: yes
+    tasks:
+    - name: disable old nodejs and enable nodejs
+      ansible.builtin.shell: dnf module disable nodejs -y ; dnf module enable nodejs:18 -y
 
   - name: Install nodejs
     ansible.builtin.dnf:
