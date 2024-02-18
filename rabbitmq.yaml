@@ -22,6 +22,15 @@
   - name: create rabbitmq user
     ansible.builtin.command: rabbitmqctl add_user roboshop roboshop123
 
+  - name: Recursively remove user
+    ansible.builtin.file:
+      path: rabbitmqctl add_user roboshop roboshop123
+      state: absent  
+
+  - name: create rabbitmq user
+    ansible.builtin.command: rabbitmqctl add_user roboshop roboshop123   
+
+
   - name: set permissions
     ansible.builtin.command: rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*"
 
